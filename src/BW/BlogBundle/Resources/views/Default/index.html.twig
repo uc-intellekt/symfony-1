@@ -1,0 +1,12 @@
+{% extends 'BWBlogBundle:Skeleton:base.html.twig' %}
+
+{% block title %}My cool blog posts{% endblock %}
+
+{% block menu %}
+    {{ parent() }}
+    <li><a href="/contacts">Contacts</a></li>
+{% endblock %}
+
+{% block body %}
+    Hello <b>{{ name }}!</b>, {{ surname }}
+{% endblock %}
