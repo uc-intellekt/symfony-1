@@ -1,0 +1,16 @@
+BW\BlogBundle\Entity\Category:
+    type: entity
+    table: categories
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        heading:
+            type: string
+            length: 255
+        description:
+            type: text
+    lifecycleCallbacks: {  }

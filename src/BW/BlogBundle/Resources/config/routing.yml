@@ -1,10 +1,14 @@
+bw_blog_category:
+    resource: "@BWBlogBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+
+index:
+    path:     /
+    defaults: { _controller: BWBlogBundle:Default:index }
+
 bw_blog_post:
     resource: "@BWBlogBundle/Resources/config/routing/post.yml"
     prefix:   /post
-
-bw_blog_homepage:
-    path:     /hello2/{name}/{surname}
-    defaults: { _controller: BWBlogBundle:Default:index }
 
 test_redirect:
     path: /redirect

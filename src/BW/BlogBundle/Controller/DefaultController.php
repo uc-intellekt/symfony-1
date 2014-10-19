@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name, $surname)
+    public function indexAction()
     {
 //        return $this->render('BWBlogBundle:Default:index.html.twig', array(
 //            'name' => $name,
@@ -16,7 +16,10 @@ class DefaultController extends Controller
         $response =  new Response($this->renderView('BWBlogBundle:Default:index.html.twig', array(
             'name' => 'Name',
             'surname' => 'Surname',
-        )), 500);
+            'array' => [
+                'one' => 1,
+            ],
+        )));
         return $response;
     }
     

@@ -1,6 +1,6 @@
 {% extends 'BWBlogBundle:Skeleton:base.html.twig' %}
 
-{% block body -%}
+{% block content -%}
     <h1>Post list</h1>
 
     <table class="records_list">
@@ -8,7 +8,6 @@
             <tr>
                 <th>Id</th>
                 <th>Heading</th>
-                <th>Description</th>
                 <th>Published</th>
                 <th>Created</th>
                 <th>Updated</th>
@@ -21,7 +20,6 @@
             <tr>
                 <td><a href="{{ path('post_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.heading }}</td>
-                <td>{{ entity.description }}</td>
                 <td>{{ entity.published ? 'yes' : 'no' }}</td>
                 <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.updated %}{{ entity.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
@@ -48,4 +46,4 @@
             </a>
         </li>
     </ul>
-{% endblock %}
+{%- endblock %}
