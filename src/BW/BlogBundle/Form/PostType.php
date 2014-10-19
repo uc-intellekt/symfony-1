@@ -15,6 +15,13 @@ class PostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('category', 'entity', [
+                'class' => 'BW\BlogBundle\Entity\Category',
+                'property' => 'heading',
+                'required' => false,
+                'empty_value' => '< No category >',
+                'expanded' => true,
+            ])
             ->add('heading')
             ->add('description')
             ->add('published', 'checkbox', [

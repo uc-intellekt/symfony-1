@@ -23,19 +23,6 @@ class Category
      * @var string
      */
     private $description;
-    
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $posts;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->posts = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
 
     /**
@@ -92,38 +79,5 @@ class Category
     public function getDescription()
     {
         return $this->description;
-    }
-
-    /**
-     * Add posts
-     *
-     * @param \BW\BlogBundle\Entity\Post $posts
-     * @return Category
-     */
-    public function addPost(\BW\BlogBundle\Entity\Post $posts)
-    {
-        $this->posts[] = $posts;
-
-        return $this;
-    }
-
-    /**
-     * Remove posts
-     *
-     * @param \BW\BlogBundle\Entity\Post $posts
-     */
-    public function removePost(\BW\BlogBundle\Entity\Post $posts)
-    {
-        $this->posts->removeElement($posts);
-    }
-
-    /**
-     * Get posts
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getPosts()
-    {
-        return $this->posts;
     }
 }

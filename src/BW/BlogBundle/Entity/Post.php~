@@ -27,7 +27,7 @@ class Post
     /**
      * @var boolean
      */
-    private $published = true;
+    private $published;
 
     /**
      * @var \DateTime
@@ -43,11 +43,6 @@ class Post
      * @var string
      */
     private $author = 'Default';
-    
-    /**
-     * @var \BW\BlogBundle\Entity\Category
-     */
-    private $category;
 
 
     public function __construct()
@@ -203,28 +198,5 @@ class Post
     public function getAuthor()
     {
         return $this->author;
-    }
-
-    /**
-     * Set category
-     *
-     * @param \BW\BlogBundle\Entity\Category $category
-     * @return Post
-     */
-    public function setCategory(\BW\BlogBundle\Entity\Category $category = null)
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
-    /**
-     * Get category
-     *
-     * @return \BW\BlogBundle\Entity\Category 
-     */
-    public function getCategory()
-    {
-        return $this->category;
     }
 }

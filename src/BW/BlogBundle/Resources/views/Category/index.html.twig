@@ -9,6 +9,7 @@
                 <th>Id</th>
                 <th>Heading</th>
                 <th>Description</th>
+                <th>Posts</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -18,6 +19,11 @@
                 <td><a href="{{ path('category_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.heading }}</td>
                 <td>{{ entity.description }}</td>
+                <td>
+                    {% for post in entity.posts %}
+                        {{ post.heading }}{{ not loop.last ? ',' }}
+                    {% endfor %}
+                </td>
                 <td>
                 <ul>
                     <li>

@@ -13,4 +13,8 @@ BW\BlogBundle\Entity\Category:
             length: 255
         description:
             type: text
+    oneToMany:
+        posts:
+            targetEntity: BW\BlogBundle\Entity\Post
+            mappedBy: category
     lifecycleCallbacks: {  }

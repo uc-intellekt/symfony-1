@@ -8,6 +8,7 @@
             <tr>
                 <th>Id</th>
                 <th>Heading</th>
+                <th>Category</th>
                 <th>Published</th>
                 <th>Created</th>
                 <th>Updated</th>
@@ -20,6 +21,7 @@
             <tr>
                 <td><a href="{{ path('post_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.heading }}</td>
+                <td>{{ entity.category ? entity.category.heading : '< No category >' }}</td>
                 <td>{{ entity.published ? 'yes' : 'no' }}</td>
                 <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.updated %}{{ entity.updated|date('Y-m-d H:i:s') }}{% endif %}</td>
